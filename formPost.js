@@ -6,6 +6,8 @@ var a1 = express();
 var a2 = express();
 var port = process.argv[2];
 
+//bodyParser.urlencoded({extended:false}) returns a middleware functions
+//that parses only urlencoded string of the request
 a1.post('/form',bodyParser.urlencoded({extended:false}));
     
 a2.post('/form',function(request,response){
